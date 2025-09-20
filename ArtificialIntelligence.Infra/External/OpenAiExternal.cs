@@ -1,10 +1,11 @@
 ﻿using ArtificialIntelligence.Domain.Models.External;
 using Newtonsoft.Json;
 using System;
+using OpenAI.Images;
 
 namespace ArtificialIntelligence.Infra.External;
 
-public class OpenAiExternal
+public class OpenAiExternal : IOpenAiExternal
 {
     private readonly HttpClient _client;
 
@@ -13,24 +14,16 @@ public class OpenAiExternal
         _client = client;
     }
 
-    public async Task<OpenAIExternalResponse> GetImage(string apiKey)
+    public async Task<System.ClientModel.ClientResult<GeneratedImage>> GetImage(string prompt, string apiKey)
     {
-        _client.DefaultRequestHeaders.Authorization =
-            new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", apiKey);
+        ImageClient client = new("gpt-image-1", apiKey);
 
-        var url = $"https://api.openai.com/v1/images/edits";
-        try
+        ImageEditOptions options = new ImageEditOptions()
         {
-            HttpResponseMessage response = await _client.GetAsync(url);
+            ResponseFormat = GeneratedImageFormat.Bytes,
+            Size = GeneratedImageSize.W1024xH1024
+        };
 
-            string responseBody = await response.EnsureSuccessStatusCode().Content.ReadAsStringAsync();
-
-            return JsonConvert.DeserializeObject<OpenAIExternalResponse>(responseBody)!;
-        }
-        catch (Exception ex)
-        {
-
-            throw new HttpRequestException($"[COMMISION PROXY][ERROR] Error on get all analytical report. {ex.ContentError ?? ex.Message}");
-        }
+        return await client.GenerateImageEditAsync("car.jpg", prompt, options);
     }
 }

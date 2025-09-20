@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ArtificialIntelligence.Domain\ArtificialIntelligence.Domain.csproj" />
+    <ProjectReference Include="..\ArtificialIntelligence.Infra\ArtificialIntelligence.Infra.csproj" />
   </ItemGroup>
 
 </Project>
