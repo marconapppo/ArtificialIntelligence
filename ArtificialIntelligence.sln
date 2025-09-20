@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36202.13 d17.14
+VisualStudioVersion = 17.14.36202.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtificialIntelligence", "ArtificialIntelligence\ArtificialIntelligence.csproj", "{69607B4C-C18E-4B70-B9E8-96353E089A0D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtificialIntelligence.Api", "ArtificialIntelligence\ArtificialIntelligence.Api.csproj", "{69607B4C-C18E-4B70-B9E8-96353E089A0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtificialIntelligence.Service", "ArtificialIntelligence.Service\ArtificialIntelligence.Service.csproj", "{5310CFB3-733C-4DF5-AF2C-F00475211915}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtificialIntelligence.Domain", "ArtificialIntelligence.Domain\ArtificialIntelligence.Domain.csproj", "{583C1C4C-EB51-47B5-98FF-9D5AC93DCFD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtificialIntelligence.Util", "ArtificialIntelligence.Util\ArtificialIntelligence.Util.csproj", "{15532B92-93F7-45C9-995D-BBBDADD96AB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{69607B4C-C18E-4B70-B9E8-96353E089A0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69607B4C-C18E-4B70-B9E8-96353E089A0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69607B4C-C18E-4B70-B9E8-96353E089A0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5310CFB3-733C-4DF5-AF2C-F00475211915}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5310CFB3-733C-4DF5-AF2C-F00475211915}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5310CFB3-733C-4DF5-AF2C-F00475211915}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5310CFB3-733C-4DF5-AF2C-F00475211915}.Release|Any CPU.Build.0 = Release|Any CPU
+		{583C1C4C-EB51-47B5-98FF-9D5AC93DCFD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{583C1C4C-EB51-47B5-98FF-9D5AC93DCFD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{583C1C4C-EB51-47B5-98FF-9D5AC93DCFD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{583C1C4C-EB51-47B5-98FF-9D5AC93DCFD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15532B92-93F7-45C9-995D-BBBDADD96AB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15532B92-93F7-45C9-995D-BBBDADD96AB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15532B92-93F7-45C9-995D-BBBDADD96AB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15532B92-93F7-45C9-995D-BBBDADD96AB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
