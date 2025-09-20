@@ -1,4 +1,5 @@
 using ArtificialIntelligence.Infra.External;
+using ArtificialIntelligence.Service.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IOpenAiExternal, OpenAiExternal>();
+builder.Services.AddScoped<IOpenAiService, OpenAiService>();
 
 var app = builder.Build();
 
